@@ -4,4 +4,8 @@ class CartsController < ApplicationController
     redirect_to carts_path
     flash[:warning] = "清除购物车"
   end
+
+  def checkout
+    @order = Order.new
+  end
 end
